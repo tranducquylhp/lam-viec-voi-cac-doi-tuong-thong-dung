@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let myBirthday = new Date(1998,11,6,17,30,36);
+        let currentDate = new Date();
+        let year = currentDate.getFullYear() - myBirthday.getFullYear();
+        let month = year * 12 + (currentDate.getMonth() - myBirthday.getMonth());
+        let day = year * 365 + (currentDate.getDay() - myBirthday.getDay());
+        let hour = day * 24 + (currentDate.getHours() - myBirthday.getHours());
+        let minute = hour * 60 + (currentDate.getMinutes() - myBirthday.getMinutes());
+        let second = minute * 60 + (currentDate.getSeconds() - myBirthday.getSeconds());
+        document.write("Tôi đã sống: "+year+" năm");
+        document.write("<br>");
+        document.write("Tôi đã sống: "+month+" tháng");
+        document.write("<br>");
+        document.write("Tôi đã sống: "+day+" ngày");
+        document.write("<br>");
+        document.write("Tôi đã sống: "+hour+" giờ");
+        document.write("<br>");
+        document.write("Tôi đã sống: "+minute+" phút");
+        document.write("<br>");
+        document.write("Tôi đã sống: "+second+" giây");
+        document.write("<br>");
+    </script>
+</body>
+</html>

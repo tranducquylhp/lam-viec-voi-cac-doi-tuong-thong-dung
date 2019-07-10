@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function countCharacter(str,char){
+            let i=str.indexOf(char);
+            if (i !== -1){
+                count++;
+                let str1 = str.substr(i+1,str.length);
+                countCharacter(str1,char);
+            }
+        }
+        let str = "Tôi yêu ngôn ngữ lập trình Javascript";
+        var count = 0;
+        countCharacter(str,"a");
+        document.write("So lan xuat hien ky tu a la: "+count+"<br>");
+        let arrayStr = str.split(" ");
+        document.write("So tu trong day tren la: "+arrayStr.length+"<br>");
+        str = str.replace("Javascript","Typescript");
+        document.write(str);
+    </script>
+</body>
+</html>
